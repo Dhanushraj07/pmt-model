@@ -1,0 +1,145 @@
+/* General styles for the navbar */
+.navbar {
+  background-color: #333;
+  padding: 1rem;
+  height: 100vh; /* Full screen height for larger screens */
+  width: 250px; /* Set the width of the left-side navbar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out; /* Smooth transition for responsiveness */
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically by default */
+  align-items: flex-start; /* Align items to the left */
+  
+}
+
+.navbar-logo {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem; /* Add space below the logo */
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+  gap: 1rem; /* Space between links */
+  width: 100%;
+  
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  padding: 0.5rem; /* Add padding for clickable area */
+}
+
+.navbar-link:hover {
+  color: #ddd;
+}
+
+/* Punch-in container styles remain the same */
+.punchin-container {
+  width: 300px;
+  height: 350px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-top: 200px;
+  margin-left: 300px;
+}
+
+#punch-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#punch-btn:hover {
+  background-color: #45a049;
+  
+}
+
+.time-display-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner-container {
+  position: relative;
+  top: 100px;
+  width: 48%;
+  padding: 10px;
+  
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+#total-time {
+  position: relative;
+  top: 10px;
+  left: 70px;
+  height: 50px;
+  width: 50px;
+  padding: 40px;
+  background-color: #5341bb;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  text-align: center;
+}
+#log-out{
+    cursor: pointer;
+  }
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .navbar {
+      position: fixed; /* Move the navbar to the top */
+      width: 100%; /* Full width for top layout */
+      height: auto; /* Adjust height */
+      display: flex;
+      flex-direction: row; /* Change layout to horizontal */
+      align-items: center;
+      justify-content: space-between; /* Space out logo and links */
+      top: 0;
+      left: 0;
+      padding: 0.5rem 1rem;
+  }
+
+  .navbar-logo {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .navbar-links {
+     
+      justify-content: space-between;
+      gap: 15rem;
+      flex-direction: row; /* Change links layout to horizontal */
+      
+      
+  }
+  
+
+  .navbar-link {
+      font-size: 1rem;
+      padding: 0.5rem 1rem; /* Adjust padding for horizontal layout */
+  }
+
+  .punchin-container {
+      margin-top: 100px; /* Adjust margin to avoid overlapping */
+      margin-left: auto; /* Center horizontally */
+  }
+}
