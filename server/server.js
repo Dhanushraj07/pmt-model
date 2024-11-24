@@ -12,4 +12,5 @@ app.use("/auth", authRoutes);
 // app.use('/home',(req,res)=>{
 //     res.send('<h1>Hello</h1>')
 // })
-app.listen(5000, () => console.log("Server running on http://localhost:5000"));
+//app.listen(5000, () => console.log("Server running on http://localhost:5000"));
+module.exports = app;
