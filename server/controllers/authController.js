@@ -31,8 +31,8 @@ exports.signin = (req, res) => {
             const token = jwt.sign({ id: user.id }, "secret_key", { expiresIn: "1h" });
             
             // Send token and username to the frontend
-            res.json({ message: "Sign in successful", token,userid:user.id,username: user.username });
-            console.log("Username :",user);
+            res.json({ message: "Sign in successful", token,userId:user.id,username: user.username });
+            console.log("User Details :",user);
         } else {
             res.status(400).json({ message: "Invalid credentials" });
         }

@@ -18,7 +18,7 @@ function Signin() {
             toast.success(response.data?.message || "Sign in successful");
             localStorage.setItem("token", response.data.token);
             localStorage.setItem("username", response.data.username);
-            localStorage.setItem("userId", response.data.userId);
+            localStorage.setItem("userid", response.data.userId);
 
             console.log("Token stored:", localStorage.getItem("token"));
             setTimeout(() => navigate("/dashboard"), 2000);
