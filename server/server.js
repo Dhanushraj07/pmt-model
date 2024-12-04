@@ -8,6 +8,11 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+// Add a root route
+app.get("/", (req, res) => {
+  res.send("Welcome to the API");
+});
+
 app.use("/auth", authRoutes);
 
 const port = process.env.PORT || 5000;
