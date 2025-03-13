@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Add a root route
-app.get("/", (req, res) => {
+app.get("/home", (req, res) => {
   res.send("Welcome to the API");
 });
 
