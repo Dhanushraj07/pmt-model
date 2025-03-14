@@ -13,7 +13,7 @@ function Signin() {
     const handleSignin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("https://pmt-model-client.vercel.app/signin", { email, password });
+            const response = await axios.post("https://pmt-model-client.vercel.app/auth/signin", { email, password });
 
             toast.success(response.data?.message || "Sign in successful");
             localStorage.setItem("token", response.data.token);
