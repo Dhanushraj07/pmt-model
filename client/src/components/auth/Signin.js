@@ -9,7 +9,7 @@ function Signin() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
-    const API_BASE_URL = process.env.REACT_APP_API_URL;
+    const API_BASE_URL = process.env.VERCEL_API;
     const handleSignin = async (e) => {
         e.preventDefault();
         try {
