@@ -9,11 +9,11 @@ function Signin() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
-
+    const API_BASE_URL = process.env.REACT_APP_API_URL;
     const handleSignin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:5000/auth/signin", { email, password });
+            const response = await axios.post(`${API_BASE_URL}/auth/signin`, { email, password });
 
             toast.success(response.data?.message || "Sign in successful");
             localStorage.setItem("token", response.data.token);
